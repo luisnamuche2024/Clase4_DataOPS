@@ -23,4 +23,13 @@ from kaggle.api.kaggle_api_extended import KaggleApi
 
 #### Autenticarnos #### 
 
+api= KaggleApi()
+api.authenticate()
 
+#### Descargar dataset ##
+###print(api.dataset_list(search=''))
+
+#### Descargar dataset ##
+
+####api.dataset_download_file('rahulvyasm/netflix-movies-and-tv-shows','netflix_titles.csv',path="dataset",force = True, quiet = False)
+api.dataset_download_files('rahulvyasm/netflix-movies-and-tv-shows',path=location,force = True, quiet = False,unzip=True)
